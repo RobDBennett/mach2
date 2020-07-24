@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Page</title>
+</head>
+
+    <body>
+        <h1>Unit 3 Sprint 3 OpenAQ Challenge.</h1>
+        <a href="/refresh" class="btn btn-default">Refresh database</a>
+        <a href="/query" class="btn btn-default">View more >= 10 PM values(refresh database first)</a>
+    </body>
+
+<div class=container2>
+    <h3>
+        Realtime data for dangerous cities(small sample for speed):
+    </h3>
+    <h4>
+        Los Angeles, Chile
+    </h4>
+    <br>
+    
+    <table style="width:100%">
+        <tr>
+            <th>Time</th>
+            <th>PM Value</th>
+        </tr>
+    {% for open in opens %}
+        <tr>
+            <td>{{open[0]}}</td>
+            <td>{{open[1]}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+    
+</div>
+
+</html>

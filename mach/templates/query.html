@@ -1,0 +1,12 @@
+<div class=container1>
+    <body>
+        <h1>Welcome to the query page.</h1>
+        <p>This contains information that is query from the database that contain if the value is over >10!</p>
+        <a href="/" class="btn btn-default">Go home</a>
+    </body>
+</div>
+<h1>Los Angeles Query:</h1>
+{% for query in q1 %}
+<h2> ID: {{ query['id'] }} Datetime: {{ query['datetime'] }} Value: {{ query['value'] }}</h2>
+{% endfor %}
+
